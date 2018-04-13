@@ -1,0 +1,63 @@
+@model lost_woods.Models.Trail
+<div class="header">
+    <h2>Add a New Trail</h2>
+    <h4><a href="/">Go Home</a></h4>
+</div>
+
+
+<form asp-controller="Trail" asp-action="AddNew" method="post">
+    <table class="table" id="borderless">
+    <tr>
+        <td><label asp-for="name"></label></td>
+        <td><input asp-for="name"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="error"><span asp-validation-for="name"></span></td>
+    </tr>
+    <tr>
+        <td><label asp-for="description"></label></td>
+        <td><input asp-for="description"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="error"><span asp-validation-for="description"></span></td>
+    </tr>
+    <tr>
+        <td><label asp-for="length"></label></td>
+        <td><input asp-for="length"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="error"><span asp-validation-for="length"></span></td>
+    </tr>
+    <tr>
+        <td><label asp-for="elevation"></label></td>
+        <td><input asp-for="elevation"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="error"><span asp-validation-for="elevation"></span></td>
+    </tr>
+    <tr>
+        <td><label asp-for="longitude"></label></td>
+        <td><input asp-for="longitude"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="error"><span asp-validation-for="longitude"></span></td>
+    </tr>
+    <tr>
+        <td><label asp-for="latitude"></label></td>
+        <td><input asp-for="latitude"/></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="error"><span asp-validation-for="latitude"></span></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="submit">Create Record</button></td>
+    </tr>
+</table>     
+</form>

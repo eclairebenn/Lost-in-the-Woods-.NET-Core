@@ -1,0 +1,31 @@
+@model lost_woods.Models.Trail
+
+<div class="info">
+    <h1>@ViewBag.Trail.name</h1>
+    <h3>Description</h3>
+    <h5>@ViewBag.Trail.description</h5>
+    <h3>Trail Length</h3>
+    <h5>@ViewBag.Trail.length Miles</h5>
+    <h3>Elevation Change</h3>
+    <h5>@ViewBag.Trail.elevation feet</h5>
+</div>
+<div class="location">
+    <h3><a href="/">Go Home</a></h3>
+    <div class="map-box">
+        <div id="map">
+            <script>
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+                });
+            }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQt3KZ9IAXdhLQv2gTabcAP4fgMNPGpSw&callback=initMap"
+            async defer></script>
+            </div>
+            <h5>Longitude : @ViewBag.Trail.longitude</h5>
+            <h5>Latitude : @ViewBag.Trail.latitude</h5>
+</div>
+
